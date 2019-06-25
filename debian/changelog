@@ -1,3 +1,10 @@
+ev3dev-mocks (1.0.0~bionic2) bionic; urgency=medium
+
+  * fix man page installation directory
+  * debian: change section to devel
+
+ -- David Lechner <david@lechnology.com>  Mon, 24 Jun 2019 23:35:20 -0500
+
 ev3dev-mocks (1.0.0~bionic1) bionic; urgency=medium
 
   * Initial Release.
