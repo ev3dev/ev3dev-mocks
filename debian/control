@@ -1,5 +1,5 @@
 Source: ev3dev-mocks
-Section: embedded
+Section: devel
 Priority: standard
 Maintainer: David Lechner <david@lechnology.com>
 Build-Depends: debhelper (>= 10), cmake, libasound2-dev, pandoc, pkg-config
