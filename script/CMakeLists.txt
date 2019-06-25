@@ -17,5 +17,5 @@ if(NOT PANDOC_NOTFOUND)
             ev3dev-mocks-run.md
     )
     add_custom_target(ev3dev-mocks-run-man ALL DEPENDS ${CMAKE_CURRENT_BINARY_DIR}/ev3dev-mocks-run.1)
-    install(FILES ${CMAKE_CURRENT_BINARY_DIR}/ev3dev-mocks-run.1 DESTINATION ${CMAKE_INSTALL_MANDIR})
+    install(FILES ${CMAKE_CURRENT_BINARY_DIR}/ev3dev-mocks-run.1 DESTINATION ${CMAKE_INSTALL_MANDIR}/man1)
 endif(NOT PANDOC_NOTFOUND)
