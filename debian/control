@@ -10,7 +10,7 @@ Vcs-Browser: https://github.com/ev3dev/ev3dev-mocks
 
 Package: ev3dev-mocks
 Architecture: amd64
-Depends: ${shlibs:Depends}, ${misc:Depends}, umockdev
+Depends: ${shlibs:Depends}, ${misc:Depends}, umockdev (>= 0.8.11-2ev3dev1)
 Description: Fake ALSA sound utility for ev3dev
  Tools for faking ev3dev hardware for unit testing.
  .
