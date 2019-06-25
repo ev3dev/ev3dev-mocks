@@ -1,0 +1,5 @@
+ev3dev-mocks (1.0.0~bionic1) bionic; urgency=medium
+
+  * Initial Release.
+
+ -- David Lechner <david@lechnology.com>  Mon, 24 Jun 2019 23:23:17 -0500

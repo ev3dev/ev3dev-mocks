@@ -1,0 +1,19 @@
+Source: ev3dev-mocks
+Section: embedded
+Priority: standard
+Maintainer: David Lechner <david@lechnology.com>
+Build-Depends: debhelper (>= 10), cmake, libasound2-dev, pandoc, pkg-config
+Standards-Version: 4.1.3
+Homepage: https://www.ev3dev.org
+Vcs-Git: https://github.com/ev3dev/ev3dev-mocks.git
+Vcs-Browser: https://github.com/ev3dev/ev3dev-mocks
+
+Package: ev3dev-mocks
+Architecture: amd64
+Depends: ${shlibs:Depends}, ${misc:Depends}, umockdev
+Description: Fake ALSA sound utility for ev3dev
+ Tools for faking ev3dev hardware for unit testing.
+ .
+ This package contains umockdev configuration files for simulating ev3dev
+ Linux kernel drivers. It also includes an ALSA plugin for simulating
+ the ev3dev sound driver.
