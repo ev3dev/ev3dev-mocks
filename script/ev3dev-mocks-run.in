@@ -3,7 +3,34 @@
 : ${EV3DEV_MOCKS_TARGET:="ev3"}
 : ${EV3DEV_MOCKS_FBDEV:="/dev/fb0"}
 
-ALSA_CONFIG_PATH=@CMAKE_INSTALL_PREFIX@/@CMAKE_INSTALL_PKGDATADIR@/ev3dev.alsa.conf \
-umockdev-run -d @CMAKE_INSTALL_PREFIX@/@CMAKE_INSTALL_PKGLIBDIR@/${EV3DEV_MOCKS_TARGET}.umockdev \
-             -i ${EV3DEV_MOCKS_FBDEV}=@CMAKE_INSTALL_PREFIX@/@CMAKE_INSTALL_PKGLIBDIR@/${EV3DEV_MOCKS_TARGET}-fbdev.ioctl \
--- "$@"
+if [ $# -eq 0 ]; then
+    echo "Usage: $0 <command>"
+    exit 1
+fi
+
+command=$(which "$1")
+magic=$(od -N 4 -t x1 -A n "$command")
+if [ "$magic" != " 7f 45 4c 46" ]; then
+    echo "<command> must be ELF binary"
+    exit 1
+fi
+
+machine=$(od -j 18 -N 1 -t x1 -A n "$command")
+case $machine in
+" 28")
+    machine="ARM"
+    ;;
+" 3e")
+    machine="x86-64"
+    ;;
+*)
+    echo "Unsupported machine architecture"
+    exit 1
+esac
+
+export ALSA_CONFIG_PATH="@CMAKE_INSTALL_PREFIX@/@CMAKE_INSTALL_PKGDATADIR@/ev3dev.alsa.conf"
+
+exec umockdev-run \
+    -d "@CMAKE_INSTALL_PREFIX@/@CMAKE_INSTALL_PKGDATADIR@/${machine}/${EV3DEV_MOCKS_TARGET}.umockdev" \
+    -i "${EV3DEV_MOCKS_FBDEV}=@CMAKE_INSTALL_PREFIX@/@CMAKE_INSTALL_PKGDATADIR@/${machine}/${EV3DEV_MOCKS_TARGET}-fbdev.ioctl" \
+    -- "$@"
