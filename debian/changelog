@@ -1,3 +1,11 @@
+ev3dev-mocks (1.1.0~xenial1) xenial; urgency=medium
+
+  * Add ARM version of umockdev data
+  * make ev3dev-mocks-run architecture independant
+  * debian: split into two packages
+
+ -- David Lechner <david@lechnology.com>  Thu, 27 Jun 2019 22:35:44 -0500
+
 ev3dev-mocks (1.0.0~xenial2) xenial; urgency=medium
 
   * debian: depend on ev3dev patched umockdev
