@@ -2,7 +2,7 @@ Source: ev3dev-mocks
 Section: devel
 Priority: standard
 Maintainer: David Lechner <david@lechnology.com>
-Build-Depends: debhelper (>= 10), cmake, libasound2-dev, pandoc, pkg-config
+Build-Depends: debhelper (>= 12), cmake, libasound2-dev, pandoc, pkg-config
 Standards-Version: 4.1.3
 Homepage: https://www.ev3dev.org
 Vcs-Git: https://github.com/ev3dev/ev3dev-mocks.git
