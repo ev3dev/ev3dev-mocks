@@ -27,5 +27,5 @@ USAGE
 
 ev3dev-mocks-run *command*
 
-*command* is any command (with or without additional arguments) to be run in
+*command* is ELF executable (with or without additional arguments) to be run in
 the special environment.
