@@ -1,3 +1,11 @@
+ev3dev-mocks (1.1.0) stable; urgency=medium
+
+  * Add ARM version of umockdev data
+  * make ev3dev-mocks-run architecture independant
+  * debian: split into two packages
+
+ -- David Lechner <david@lechnology.com>  Thu, 27 Jun 2019 22:37:49 -0500
+
 ev3dev-mocks (1.0.0) stable; urgency=medium
 
   * Initial Release.
