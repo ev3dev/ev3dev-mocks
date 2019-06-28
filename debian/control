@@ -9,11 +9,25 @@ Vcs-Git: https://github.com/ev3dev/ev3dev-mocks.git
 Vcs-Browser: https://github.com/ev3dev/ev3dev-mocks
 
 Package: ev3dev-mocks
-Architecture: amd64 armel armhf
-Depends: ${shlibs:Depends}, ${misc:Depends}, umockdev (>= 0.8.11-2ev3dev1)
-Description: Fake ALSA sound utility for ev3dev
+Architecture: all
+Multi-Arch: foreign
+Depends: ${misc:Depends}, umockdev (>= 0.11.1-1ev3dev2~), libasound2-plugin-ev3dev
+Description: Fake udev and ALSA sound utility for ev3dev
  Tools for faking ev3dev hardware for unit testing.
  .
  This package contains umockdev configuration files for simulating ev3dev
  Linux kernel drivers. It also includes an ALSA plugin for simulating
  the ev3dev sound driver.
+
+Package: libasound2-plugin-ev3dev
+Architecture: any
+Multi-Arch: same
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: Fake udev and ALSA sound utility for ev3dev
+ Tools for faking ev3dev hardware for unit testing.
+ .
+ This package contains umockdev configuration files for simulating ev3dev
+ Linux kernel drivers. It also includes an ALSA plugin for simulating
+ the ev3dev sound driver.
+ .
+ This package provides the ALSA plugin.
