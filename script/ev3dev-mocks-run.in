@@ -9,6 +9,11 @@ if [ $# -eq 0 ]; then
 fi
 
 command=$(which "$1")
+if [ "$command" == "" ]; then
+    echo "Could not find \"$1\" in \$PATH"
+    exit 1
+fi
+
 magic=$(od -N 4 -t x1 -A n "$command")
 if [ "$magic" != " 7f 45 4c 46" ]; then
     echo "<command> must be ELF binary"
@@ -33,4 +38,5 @@ export ALSA_CONFIG_PATH="@CMAKE_INSTALL_PREFIX@/@CMAKE_INSTALL_PKGDATADIR@/ev3de
 exec umockdev-run \
     -d "@CMAKE_INSTALL_PREFIX@/@CMAKE_INSTALL_PKGDATADIR@/${machine}/${EV3DEV_MOCKS_TARGET}.umockdev" \
     -i "${EV3DEV_MOCKS_FBDEV}=@CMAKE_INSTALL_PREFIX@/@CMAKE_INSTALL_PKGDATADIR@/${machine}/${EV3DEV_MOCKS_TARGET}-fbdev.ioctl" \
+    $EV3DEV_MOCKS_UMOCKDEV_RUN_ARGS \
     -- "$@"
