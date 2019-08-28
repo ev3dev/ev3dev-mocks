@@ -1,3 +1,9 @@
+ev3dev-mocks (1.3.2) stretch; urgency=medium
+
+  * Fix dash compatibility
+
+ -- David Lechner <david@lechnology.com>  Wed, 28 Aug 2019 16:03:15 -0500
+
 ev3dev-mocks (1.3.1) stretch; urgency=medium
 
   * Better error message when command does not exist
