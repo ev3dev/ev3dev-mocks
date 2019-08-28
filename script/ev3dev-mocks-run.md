@@ -29,3 +29,11 @@ ev3dev-mocks-run *command*
 
 *command* is ELF executable (with or without additional arguments) to be run in
 the special environment.
+
+
+ENVIRONMENT VARIABLES
+=====================
+
+`EV3DEV_MOCKS_UMOCKDEV_RUN_ARGS`
+:   Can be used to pass extra command line arguments to the *umockdev-run*
+    command.
