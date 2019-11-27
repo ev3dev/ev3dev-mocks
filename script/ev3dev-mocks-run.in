@@ -9,7 +9,7 @@ if [ $# -eq 0 ]; then
 fi
 
 command=$(which "$1")
-if [ "$command" == "" ]; then
+if [ "$command" = "" ]; then
     echo "Could not find \"$1\" in \$PATH"
     exit 1
 fi
