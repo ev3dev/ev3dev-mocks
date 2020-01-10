@@ -619,6 +619,50 @@ A: scan_elements/in_frequency3_index=7
 A: scan_elements/in_frequency3_type=le:s32/32>>0
 A: trigger/current_trigger=virtio0.ev3-tacho-rpmsg.-1.0
 
+P: /devices/platform/soc@1c00000/ti-pruss/1c32000.pru1/remoteproc/remoteproc0/virtio0/virtio0.ev3-tacho-rpmsg.-1.0/leds/led0:green:brick-status
+E: SUBSYSTEM=leds
+A: brightness=255
+L: device=../../../virtio0.ev3-tacho-rpmsg.-1.0
+A: max_brightness=255
+A: power/control=auto
+A: power/runtime_active_time=0
+A: power/runtime_status=unsupported
+A: power/runtime_suspended_time=0
+A: trigger=none rfkill-any kbd-scrolllock kbd-numlock kbd-capslock kbd-kanalock kbd-shiftlock kbd-altgrlock kbd-ctrllock kbd-altlock kbd-shiftllock kbd-shiftrlock kbd-ctrlllock kbd-ctrlrlock mmc0 timer heartbeat [default-on] transient lego-ev3-battery-charging-or-full lego-ev3-battery-charging lego-ev3-battery-full lego-ev3-battery-charging-blink-full-solid rfkill0
+
+P: /devices/platform/soc@1c00000/ti-pruss/1c32000.pru1/remoteproc/remoteproc0/virtio0/virtio0.ev3-tacho-rpmsg.-1.0/leds/led0:red:brick-status
+E: SUBSYSTEM=leds
+A: brightness=0
+L: device=../../../virtio0.ev3-tacho-rpmsg.-1.0
+A: max_brightness=255
+A: power/control=auto
+A: power/runtime_active_time=0
+A: power/runtime_status=unsupported
+A: power/runtime_suspended_time=0
+A: trigger=[none] rfkill-any kbd-scrolllock kbd-numlock kbd-capslock kbd-kanalock kbd-shiftlock kbd-altgrlock kbd-ctrllock kbd-altlock kbd-shiftllock kbd-shiftrlock kbd-ctrlllock kbd-ctrlrlock mmc0 timer heartbeat default-on transient lego-ev3-battery-charging-or-full lego-ev3-battery-charging lego-ev3-battery-full lego-ev3-battery-charging-blink-full-solid rfkill0
+
+P: /devices/platform/soc@1c00000/ti-pruss/1c32000.pru1/remoteproc/remoteproc0/virtio0/virtio0.ev3-tacho-rpmsg.-1.0/leds/led1:green:brick-status
+E: SUBSYSTEM=leds
+A: brightness=255
+L: device=../../../virtio0.ev3-tacho-rpmsg.-1.0
+A: max_brightness=255
+A: power/control=auto
+A: power/runtime_active_time=0
+A: power/runtime_status=unsupported
+A: power/runtime_suspended_time=0
+A: trigger=none rfkill-any kbd-scrolllock kbd-numlock kbd-capslock kbd-kanalock kbd-shiftlock kbd-altgrlock kbd-ctrllock kbd-altlock kbd-shiftllock kbd-shiftrlock kbd-ctrlllock kbd-ctrlrlock mmc0 timer heartbeat [default-on] transient lego-ev3-battery-charging-or-full lego-ev3-battery-charging lego-ev3-battery-full lego-ev3-battery-charging-blink-full-solid rfkill0
+
+P: /devices/platform/soc@1c00000/ti-pruss/1c32000.pru1/remoteproc/remoteproc0/virtio0/virtio0.ev3-tacho-rpmsg.-1.0/leds/led1:red:brick-status
+E: SUBSYSTEM=leds
+A: brightness=0
+L: device=../../../virtio0.ev3-tacho-rpmsg.-1.0
+A: max_brightness=255
+A: power/control=auto
+A: power/runtime_active_time=0
+A: power/runtime_status=unsupported
+A: power/runtime_suspended_time=0
+A: trigger=[none] rfkill-any kbd-scrolllock kbd-numlock kbd-capslock kbd-kanalock kbd-shiftlock kbd-altgrlock kbd-ctrllock kbd-altlock kbd-shiftllock kbd-shiftrlock kbd-ctrlllock kbd-ctrlrlock mmc0 timer heartbeat default-on transient lego-ev3-battery-charging-or-full lego-ev3-battery-charging lego-ev3-battery-full lego-ev3-battery-charging-blink-full-solid rfkill0
+
 P: /devices/platform/soc@1c00000/ti-pruss/1c32000.pru1/remoteproc/remoteproc0/virtio0/virtio0.ev3-tacho-rpmsg.-1.0
 E: DRIVER=ev3_pru
 E: MODALIAS=of:Nev3-tacho-rpmsgT<NULL>Cev3dev,ev3-pru-tacho
