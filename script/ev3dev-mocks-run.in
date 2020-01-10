@@ -1,6 +1,7 @@
 #!/bin/sh
 
 : ${EV3DEV_MOCKS_TARGET:="ev3"}
+: ${EV3DEV_MOCKS_BUTTONS:="/dev/input/by-path/platform-gpio_keys-event"}
 : ${EV3DEV_MOCKS_FBDEV:="/dev/fb0"}
 
 if [ $# -eq 0 ]; then
@@ -37,6 +38,7 @@ export ALSA_CONFIG_PATH="@CMAKE_INSTALL_PREFIX@/@CMAKE_INSTALL_PKGDATADIR@/ev3de
 
 exec umockdev-run \
     -d "@CMAKE_INSTALL_PREFIX@/@CMAKE_INSTALL_PKGDATADIR@/${machine}/${EV3DEV_MOCKS_TARGET}.umockdev" \
+    -i "${EV3DEV_MOCKS_BUTTONS}=@CMAKE_INSTALL_PREFIX@/@CMAKE_INSTALL_PKGDATADIR@/${machine}/${EV3DEV_MOCKS_TARGET}-buttons.ioctl" \
     -i "${EV3DEV_MOCKS_FBDEV}=@CMAKE_INSTALL_PREFIX@/@CMAKE_INSTALL_PKGDATADIR@/${machine}/${EV3DEV_MOCKS_TARGET}-fbdev.ioctl" \
     $EV3DEV_MOCKS_UMOCKDEV_RUN_ARGS \
     -- "$@"
