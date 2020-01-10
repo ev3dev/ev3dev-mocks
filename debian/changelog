@@ -1,3 +1,9 @@
+ev3dev-mocks (1.4.0~bionic1) bionic; urgency=medium
+
+  * Add EV3 LEDs
+
+ -- David Lechner <david@lechnology.com>  Thu, 09 Jan 2020 19:19:04 -0600
+
 ev3dev-mocks (1.3.2~bionic1) bionic; urgency=medium
 
   * Fix dash compatibility
